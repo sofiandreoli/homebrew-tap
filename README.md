@@ -75,7 +75,12 @@ wdm --version
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | `wdm up <branch>`                     | Create worktree, generate env files, create DBs, run `after_create` hooks, start services, register processes. |
 | `wdm down <branch>`                   | Stop services (from registry), remove worktree, drop DBs, remove registry entry.                               |
+| `wdm stop <branch>`                   | Kill (`-9`) all services for a branch. Keeps the worktree, databases, and registry entry (PID cleared).        |
+| `wdm stop <branch> <service>`         | Kill (`-9`) a single service. Same as above but scoped to one service.                                         |
+| `wdm restart <branch>`                | Restart all stopped services for a branch (re-uses stored `cmd` and port).                                     |
+| `wdm restart <branch> <service>`      | Restart a single stopped service.                                                                              |
 | `wdm list`                            | List active environments (branch, service, port, PID, status).                                                 |
+| `wdm cleanup`                         | Remove stale (stopped) entries from the registry; drops worktree and DBs if all services for a branch stopped. |
 | `wdm config show`                     | Print the parsed `.devmanager.yml` for the current directory.                                                  |
 | `wdm ports scan`                      | Print the first free port in each service’s `port_range`.                                                      |
 | `wdm --version`                       | Print the embedded version string.                                                                             |
