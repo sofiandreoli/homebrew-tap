@@ -5,20 +5,20 @@
 class Wdm < Formula
   desc "CLI to spin up isolated per-branch dev environments with git worktrees"
   homepage "https://github.com/sofiandreoli/wdm-releases"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.5/wdm_0.1.5_darwin_amd64.tar.gz"
-      sha256 "53b2ddc1a294075bc1c872308879316edf49395c5e0fef8039690dc6315ab0d3"
+      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.6/wdm_0.1.6_darwin_amd64.tar.gz"
+      sha256 "8a347061b5db94758bce7683d9018c3fae918331182875ff5d7192c36d384048"
 
       define_method(:install) do
         bin.install "wdm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.5/wdm_0.1.5_darwin_arm64.tar.gz"
-      sha256 "6352997d74faa7474523b2214b3e41360e69f2d99b0123733f4a1cb35a6970d5"
+      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.6/wdm_0.1.6_darwin_arm64.tar.gz"
+      sha256 "358ea74693a2468e97df9613392bcde3c6c0b59f8d6056b93d923679e187a0de"
 
       define_method(:install) do
         bin.install "wdm"
@@ -28,15 +28,15 @@ class Wdm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.5/wdm_0.1.5_linux_amd64.tar.gz"
-      sha256 "4a2bfc1f66f8a337ff6782f78aa83a9996db5716a47c332e8b33e537deee893d"
+      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.6/wdm_0.1.6_linux_amd64.tar.gz"
+      sha256 "5bf896c00dddfe00d3f918e4861704b855ed9dfaa597a87a2ca6e79c33594755"
       define_method(:install) do
         bin.install "wdm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.5/wdm_0.1.5_linux_arm64.tar.gz"
-      sha256 "429bacce9fdbcdf8d4d6e2280e9cb586d87b7da2a326867872ad322e76c9299e"
+      url "https://github.com/sofiandreoli/wdm-releases/releases/download/v0.1.6/wdm_0.1.6_linux_arm64.tar.gz"
+      sha256 "07b169adb4b7ae3c4883652d0a6c7618591d6588a070dedde979c10f9610ba19"
       define_method(:install) do
         bin.install "wdm"
       end
